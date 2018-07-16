@@ -1,4 +1,4 @@
-layout/node_modules
-layout/src/scss
-layout/package.json
-layout/package-lock.json
+/layout/node_modules/
+/layout/src/scss/
+/layout/package.json
+/layout/package-lock.json
