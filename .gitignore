@@ -1,0 +1,6 @@
+layout/**
+!layout/src/
+!layout/gulpfile.js
+
+tema/**
+!tema/wp-content/themes/bs4wp/
