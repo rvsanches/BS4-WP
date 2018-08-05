@@ -1,8 +1,0 @@
-!/tema/
-/tema/**
-!/tema/wp-content/themes/bs4wp
-
-!/layout/
-/layout/**
-!/layout/src
-!/layout/gulpfile.js
