@@ -1,6 +1,4 @@
-/layout/node_modules/
-/layout/package.json
-/layout/package-lock.json
-!/tema/
-/tema/**
+/**
+!/layout/src/
+!/layout/gulpfile.js
 !/tema/wp-content/themes/bs4wp/
