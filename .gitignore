@@ -1,5 +1,6 @@
 /layout/node_modules/
 /layout/package.json
 /layout/package-lock.json
+!/tema/
 /tema/**
 !/tema/wp-content/themes/bs4wp/
