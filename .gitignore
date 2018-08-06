@@ -8,6 +8,7 @@
 /tema/wp-content/themes/twentyfifteen/
 /tema/wp-content/themes/twentyseventeen
 /tema/wp-content/themes/twentysixteen
+/tema/wp-content/themes/index.php
 /tema/wp-content/index.php
 /tema/.htaccess
 /tema/index.php
@@ -23,7 +24,7 @@
 /tema/wp-load.php
 /tema/wp-login.php
 /tema/wp-mail.php
-/tema/settings.php
+/tema/wp-settings.php
 /tema/wp-signup.php
 /tema/wp-trackback.php
 /tema/xmlrpc.php
