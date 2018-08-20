@@ -24,4 +24,21 @@ register_nav_menus( array(
     'principal' => __('Menu principal', 'bs4wp')
 ));
 
+// Definir as miniaturas dos posts
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 1280, 720, true );
+
+// Definir o tamanho o resumo
+add_filter( 'excerpt_length', function($length) {
+    return 50;
+} );
+
+// Definir o estilo da paginação
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="btn btn-outline-my-color-5"';
+}
+
 ?>
