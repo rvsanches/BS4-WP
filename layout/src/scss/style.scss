@@ -1,4 +1,4 @@
-//Cria nosso tema
+// Cria nosso tema
 $my-color-1: #00A1FF;
 $my-color-2: #E2711D;
 $my-color-3: #FFCD8A;
@@ -13,8 +13,18 @@ $theme-colors:(
     "my-color-5": $my-color-5
 );
 
-//Classes personlizadas
+// Classes personlizadas
 $link-color: $my-color-5;
+
+//Deixa as imagens dos posts responsivas
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
 
 // importa o Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
