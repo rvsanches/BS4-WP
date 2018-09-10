@@ -52,4 +52,40 @@ register_sidebar(
         'after_title' => '</h5><div class="card-body">',
 ));
 
+// Ativar o fomrulário para respostas nos comentários
+function theme_queue_js() {
+    if ( (!is_admin()) && is_singular() && comments_open() && get_option('thread_comments') ) wp_enqueue_script('comment-reply');
+}
+add_action('wp_print_scripts', 'theme_queue_js');
+
+// Personalizar os comentários
+function format_comment($comment, $args, $depth) {
+
+    $GLOBALS['comment'] = $comment; ?>
+
+    <div <?php comment_class('ml-4'); ?> id="comment-<?php comment_ID(); ?>">
+
+        <div class="card mb-3">
+            <div class="card-body">
+
+            <div class="comment-intro">
+
+                <h5 class="card-title"><?php printf(__('%s'), get_comment_author_link()) ?></h5>
+                <h6 class="card-subtitle mb-3 text-muted">Comentou em <?php printf(__('%1$s'), get_comment_date('d/m/y'), get_comment_time()) ?></h6>
+            
+            </div>
+
+            <?php comment_text(); ?>
+
+            <div class="reply">
+                <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+            </div>
+
+            </div>
+        </div>
+
+    <?php
+
+}
+
 ?>
