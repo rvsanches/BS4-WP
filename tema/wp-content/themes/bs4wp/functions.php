@@ -52,6 +52,17 @@ register_sidebar(
         'after_title' => '</h5><div class="card-body">',
 ));
 
+// Criar o campo de busca
+register_sidebar(
+    array(
+        'name' => 'Busca',
+        'id' => 'busca',
+        'before_widget' => '<div class="blog-search">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5>',
+        'after_title' => '</h5>',
+));
+
 // Ativar o fomrulário para respostas nos comentários
 function theme_queue_js() {
     if ( (!is_admin()) && is_singular() && comments_open() && get_option('thread_comments') ) wp_enqueue_script('comment-reply');
