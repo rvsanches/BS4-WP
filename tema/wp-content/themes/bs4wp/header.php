@@ -21,12 +21,25 @@
 
       <div class="row my-5 align-items-center">
 
-        <div class="col-md-8 col-sm-12">
-          <h1><?php bloginfo('name'); ?></h1>
-          <p class="lead"><?php bloginfo('description'); ?></p>
+        <div class="col-md-6 col-sm-12">
+
+          <?php
+          
+            $custom_logo_id = get_theme_mod( 'custom_logo' );
+            $logo = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+
+            if ( has_custom_logo() ) {
+              echo '<img src="' . esc_url( $logo[0] ) . '" class="img-fluid">';
+            } else {
+              echo '<h1>' . get_bloginfo('name') . '</h1>';
+              echo '<p class="lead">' . get_bloginfo('description') . '</p>';
+            }
+          
+          ?>
+
         </div>
 
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 offset-md-2 col-sm-12">
           
           <?php // Adiciona o fomrulário de buscas
               dynamic_sidebar('Busca'); ?>
